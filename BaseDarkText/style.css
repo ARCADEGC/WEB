@@ -1,0 +1,76 @@
+@font-face {
+    font-family: Reg;
+    src: url(RobotoMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: Thn;
+    src: url(RobotoMono-ExtraLight.ttf);
+}
+
+*{ margin: 0; padding: 0}
+
+html {scroll-behavior: smooth;}
+
+body, .link {
+    background-color: rgb(33, 33, 33);
+    color: rgb(236, 240, 241);
+    text-shadow: 2px 3px 25px rgba(236, 240, 241, .2);
+}
+
+h1, h2, h3, h4, li {font-family: Reg}
+
+p {font-family: Thn}
+
+.from_left {
+    margin: 10vw 20vw; margin-right: 5vw;
+    text-align: left;
+    display: grid;
+    flex-direction: column;
+    gap: 10vh;
+}
+
+.glass, #under_img {
+    opacity: .5;
+    margin-top: -9vh;
+}
+
+.link {
+    text-decoration: none;
+    transition: .2s ease-out;
+    border-bottom: 1px solid rgb(149, 165, 166, .5);
+}
+
+.link:hover {
+    transition: .5s;
+    margin-left: 1vw;
+    font-size: 120%;
+    color: rgb(149, 165, 166);
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style: none;
+    margin-top: -7vh;
+}
+
+li {
+    padding-left: 3vw;
+}
+
+.glass_list {
+    opacity: .5;
+    font-size: 80%;
+    padding-left: 3vw; padding-top: 1vh;
+    width: 40vw;
+}
+
+#placeholder_img {
+    aspect-ratio: 1/1;
+    border-radius: 1px;
+    background-color: rgb(236, 240, 241, .05);
+}
+
+.img {
+    width: 50vh;
+}
