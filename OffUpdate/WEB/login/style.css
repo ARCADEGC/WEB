@@ -1,0 +1,72 @@
+@font-face {
+    font-family: SANS-Bold;
+    src: url("Fonts/Montserrat-Bold.ttf")
+}
+
+input::placeholder{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, p, input {
+    font-family: SANS-Bold;
+    text-shadow: 2px 3px 25px rgb(236, 240, 241, .1);
+}
+
+h1 {
+    font-size: 150%;
+}
+
+p {
+    font-size: 80%;
+}
+
+.box{
+    margin: auto;
+    position: absolute;
+    width: 30vw; height: 40vh;
+    top: 0; bottom: 0; left: 0; right: 0;
+    display: flex;
+    gap: 1vh;
+    flex-direction: column;
+    box-shadow: 10px 3px 45px rgb(236, 240, 241, .05);
+    background-color: rgba(179, 179, 179, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 2vh;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+}
+
+body {
+    background-color: #333333;
+    color: rgb(236, 240, 241);
+}
+
+.button {
+    transition: .2s ease-out;
+    padding: 5px 75px;
+    background-color: rgb(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    transition: .5s ease-out;
+    background-color: rgb(7, 7, 7, 0.5);
+}
+
+input{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(124, 124, 124, 0.2);
+    border-color: rgba(255, 255, 255, 0);
+    color: rgb(236, 240, 241);
+    font-family: SANS-Bold;
+    font-size: 100%;
+    text-shadow: 2px 2px 10px rgb(0, 0, 0, 0.2);
+}
