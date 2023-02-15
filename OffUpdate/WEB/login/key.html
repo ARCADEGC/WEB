@@ -1,3 +1,23 @@
+<?php
+include "conection.php";
+
+if (isset($_POST["Email"]) && isset($_POST["Password"])) {
+    $email = $_POST["Email"];
+    $password = $_POST["Password"];
+
+    $query = "SELECT KeyCode FROM User WHERE Email = '$email' AND Password = '$password'";
+    $result = mysqli_query($conn, $query);
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $key = $row["KeyCode"];
+    } else {
+        $key = "User not found.";
+    }
+} else {
+    $key = "Email and password not provided.";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,18 +30,14 @@
 <body>
     <div class="box">
         <h1>PRODUCT KEY</h1>
-        <p class="undertext">for 
-            #</p>
+        <p class="undertext">for <?php echo $email; ?></p>
         <br>
 
-        <p>****-****-****-****</p>
-
+        <p><?php echo $key; ?></p>
 
         <form action="index.html" method="POST">
             <input type="Submit" value="BACK TO LOGIN" class="button2" >
         </form>
-
     </div>
-
 </body>
 </html>
